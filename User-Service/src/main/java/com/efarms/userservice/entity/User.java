@@ -6,4 +6,5 @@ public class User {
 	String name;
 	int dob;
 
+	String lastName;
 }
