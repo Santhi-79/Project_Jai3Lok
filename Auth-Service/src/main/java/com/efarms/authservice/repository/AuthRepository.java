@@ -1,5 +1,7 @@
 package com.efarms.authservice.repository;
 
-public class AuthRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface AuthRepository{
 
 }
