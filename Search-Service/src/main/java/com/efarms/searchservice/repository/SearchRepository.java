@@ -1,5 +1,5 @@
 package com.efarms.searchservice.repository;
 
-public class SearchRepository {
+public interface SearchRepository {
 
 }
