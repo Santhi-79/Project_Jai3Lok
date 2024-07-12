@@ -1,5 +1,5 @@
 package com.efarms.paymentservice.repository;
 
-public class PaymentRepository {
+public interface PaymentRepository {
 
 }
