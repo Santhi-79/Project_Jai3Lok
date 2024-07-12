@@ -1,5 +1,5 @@
 package com.efarms.notificationservice.repository;
 
-public class NotificationRepository {
+public interface NotificationRepository {
 
 }
