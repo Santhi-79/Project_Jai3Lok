@@ -1,5 +1,5 @@
 package com.efarms.recommendationservice.repository;
 
-public class RecommendationRepository {
+public interface RecommendationRepository {
 
 }
