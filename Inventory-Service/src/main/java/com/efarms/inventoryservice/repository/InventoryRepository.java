@@ -1,5 +1,5 @@
 package com.efarms.inventoryservice.repository;
 
-public class InventoryRepository {
+public interface InventoryRepository {
 
 }
