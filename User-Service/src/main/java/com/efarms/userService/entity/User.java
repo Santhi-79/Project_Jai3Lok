@@ -26,6 +26,8 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+	//this is my new update
+	
     @Column(name = "first_name")
     private String firstName;
     
