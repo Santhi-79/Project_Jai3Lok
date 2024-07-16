@@ -27,6 +27,7 @@ public class User {
     private Long id;
 
 	//this is my new update
+	// This changes from sridhar
 	
     @Column(name = "first_name")
     private String firstName;
