@@ -28,4 +28,12 @@ private UserService userService;
 		User user=userService.findUserProfileByJwt(jwt);
 		return new ResponseEntity<User>(user,HttpStatus.ACCEPTED);
 }
+	/* have to remove after below method*/
+	@GetMapping("/profile/user")
+	public ResponseEntity<User> getUserProfileHandler_user(@RequestHeader("Authorization") String jwt) throws UserException{
+
+		System.out.println("/api/users/profile");
+		User user=userService.findUserProfileByJwt(jwt);
+		return new ResponseEntity<User>(user,HttpStatus.ACCEPTED);
+}
 }
