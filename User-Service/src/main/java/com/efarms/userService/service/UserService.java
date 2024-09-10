@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import com.efarms.userService.entity.User;
 import com.efarms.userService.exception.UserException;
 
-@Service
+
 public interface UserService {
 public User findUserById(Long userId) throws UserException;
 	

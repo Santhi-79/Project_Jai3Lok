@@ -4,12 +4,14 @@ import java.util.List;
 
 import java.util.Optional;
 
+import org.springframework.stereotype.Service;
+
 import com.efarms.userService.config.JwtTokenProvider;
 import com.efarms.userService.entity.User;
 import com.efarms.userService.exception.UserException;
 import com.efarms.userService.repository.UserRepository;
 import com.efarms.userService.service.UserService;
-
+@Service
 public class UserServiceImplementation implements UserService{
 	private UserRepository userRepository;
 	private JwtTokenProvider jwtTokenProvider;
