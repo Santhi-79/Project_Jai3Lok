@@ -1,42 +1,41 @@
-package com.efarms.orderservice.entity;
-
-import java.util.Date;
+package com.efarms.cartservice.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
-import jakarta.persistence.Temporal;
-import jakarta.persistence.TemporalType;
 
 @Entity
-@Table(name = "orders")
-public class Order {
+@Table(name = "cart_item")
+public class CartItem {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private Long productId;
     private String productName;
     private int quantity;
     private double price;
-    
-    @Temporal(TemporalType.DATE)
-    private Date orderDate;
-    
-    private String status;
+
+    @ManyToOne
+    @JoinColumn(name = "cart_id")
+    private Cart cart;
 
     // Constructors
-    public Order() {
+    public CartItem() {
+    	
     }
 
-    public Order(String productName, int quantity, double price, Date orderDate, String status) {
+    public CartItem(Long productId, String productName, int quantity, double price, Cart cart) {
+        this.productId = productId;
         this.productName = productName;
         this.quantity = quantity;
         this.price = price;
-        this.orderDate = orderDate;
-        this.status = status;
+        this.cart = cart;
     }
 
     // Getters and Setters
@@ -46,6 +45,14 @@ public class Order {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Long getProductId() {
+        return productId;
+    }
+
+    public void setProductId(Long productId) {
+        this.productId = productId;
     }
 
     public String getProductName() {
@@ -72,19 +79,12 @@ public class Order {
         this.price = price;
     }
 
-    public Date getOrderDate() {
-        return orderDate;
+    public Cart getCart() {
+        return cart;
     }
 
-    public void setOrderDate(Date orderDate) {
-        this.orderDate = orderDate;
+    public void setCart(Cart cart) {
+        this.cart = cart;
     }
 
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
 }
