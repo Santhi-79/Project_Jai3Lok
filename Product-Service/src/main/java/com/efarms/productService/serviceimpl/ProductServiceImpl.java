@@ -1,4 +1,4 @@
-package com.efarms.productService.service;
+package com.efarms.productService.serviceimpl;
 
 import java.util.List;
 
@@ -10,6 +10,7 @@ import com.efarms.productService.entity.Product;
 import com.efarms.productService.repository.CategoryRepository;
 import com.efarms.productService.repository.ProductRepository;
 import com.efarms.productService.request.CreateProductRequest;
+import com.efarms.productService.service.ProductService;
 import com.efarms.userService.service.UserService;
 
 public class ProductServiceImpl implements ProductService{

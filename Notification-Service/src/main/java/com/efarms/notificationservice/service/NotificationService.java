@@ -1,5 +1,13 @@
 package com.efarms.notificationservice.service;
 
-public class NotificationService {
+import java.util.List;
+
+import com.efarms.notificationservice.entity.Notification;
+
+public interface NotificationService {
+	
+	Notification sendNotification(Notification notification);
+    List<Notification> getNotificationsByUserId(Long userId);
+    Notification markAsRead(Long notificationId);
 
 }

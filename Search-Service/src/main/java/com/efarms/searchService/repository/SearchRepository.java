@@ -10,7 +10,7 @@ import com.efarms.searchService.entity.Search;
 
 public interface SearchRepository extends JpaRepository<Search, Long>{
 	
-	@Query("SELECT i FROM Item i WHERE LOWER(i.name) LIKE LOWER(CONCAT('%', :keyword, '%')) " +
+	@Query("SELECT i FROM Search i WHERE LOWER(i.name) LIKE LOWER(CONCAT('%', :keyword, '%')) " +
 	           "OR LOWER(i.description) LIKE LOWER(CONCAT('%', :keyword, '%'))")
 	    List<Search> searchByKeyword(@Param("keyword") String keyword);
 }
