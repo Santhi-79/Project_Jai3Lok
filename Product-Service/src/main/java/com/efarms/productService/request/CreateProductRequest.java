@@ -1,6 +1,7 @@
 package com.efarms.productService.request;
 
 public class CreateProductRequest {
+	
 	 	private String title;
 
 	    private String description;
@@ -20,8 +21,11 @@ public class CreateProductRequest {
 	    private String imageUrl;
 
 	    private String topLavelCategory;
+	    
 	    private String secondLavelCategory;
+	    
 	    private String thirdLavelCategory;
+	    
 		public String getTitle() {
 			return title;
 		}
