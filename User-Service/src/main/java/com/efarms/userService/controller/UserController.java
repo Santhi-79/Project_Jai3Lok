@@ -19,7 +19,10 @@ private UserService userService;
 	public UserController(UserService userService) {
 		this.userService=userService;
 	}
-	
+	@GetMapping("/api/users")
+	public String greet() {
+		return "Hello Welcome to the User Page";
+	}
 	
 	@GetMapping("/profile")
 	public ResponseEntity<User> getUserProfileHandler(@RequestHeader("Authorization") String jwt) throws UserException{
