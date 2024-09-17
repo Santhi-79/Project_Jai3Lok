@@ -22,6 +22,11 @@ public class OrderController {
 	
 	@Autowired
     private OrderService orderService;
+	
+	@GetMapping("/api/orders")
+	public String greet() {
+		return "Hello Welcome to the User Page";
+	}
 
     @PostMapping
     public ResponseEntity<Order> createOrder(@RequestBody Order order) {

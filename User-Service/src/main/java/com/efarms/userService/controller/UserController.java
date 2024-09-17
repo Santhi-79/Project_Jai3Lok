@@ -19,7 +19,7 @@ private UserService userService;
 	public UserController(UserService userService) {
 		this.userService=userService;
 	}
-	@GetMapping("/api/users")
+	@GetMapping("/helo")
 	public String greet() {
 		return "Hello Welcome to the User Page";
 	}
